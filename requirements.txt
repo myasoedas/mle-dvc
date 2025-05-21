@@ -81,6 +81,7 @@ plotly==5.18.0
 prompt-toolkit==3.0.43
 psutil==5.9.8
 psycopg2-binary==2.9.9
+pyarrow==20.0.0
 pycparser==2.21
 pydantic==2.6.0
 pydantic_core==2.16.1

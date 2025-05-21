@@ -24,3 +24,25 @@ AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
 
 ```
+
+## Создать виртуальное окружение
+
+```bash
+sudo vim /etc/resolv.conf
+# Добавь строку в настройки DNS: 
+# чтобы не было проблем с загрузкой - необходимо установить DNS Google
+nameserver 8.8.8.8
+
+python3.10 -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+which python
+python --version
+pip --version
+python -c "import dvc; import dotenv; import pandas; import psycopg2; import sklearn; import boto3; print('OK')"
+pip install pyarrow
+python -c "import dvc; import dotenv; import pandas; import psycopg2; import sklearn; import boto3; print('OK')"
+pip freeze > requirements.txt
+
+```
